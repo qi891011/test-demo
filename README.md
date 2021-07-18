@@ -1,2 +1,2 @@
 # test-demo
-这是一个GoLang演示项目
+这是一个Go语言演示项目
