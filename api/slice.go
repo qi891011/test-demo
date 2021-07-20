@@ -33,6 +33,7 @@ func main() {
 	fmt.Println(mySlice3)
 	fmt.Println("mySlice3的容量", cap(mySlice3))
 
+	//2种遍历切片
 	for i := 0; i < len(summer); i++ {
 		fmt.Println("summer[", i, "]", summer[i])
 	}
