@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 )
 
@@ -20,10 +21,24 @@ func main() {
 	fmt.Println("str4:", str4)
 	fmt.Println("str5:", str5)
 	//字符串遍历
-	str_ := "Hello, 世界"
+	str_ := "Hello, niho"
 	n := len(str_)
 	for i := 0; i < n; i++ {
 		ch := str_[i]
 		fmt.Println(i, ch)
+		fmt.Println(i, string(ch))
 	}
+	//for true{
+	//	fmt.Printf("这是无限循环。\n")
+	//}
+	v1 := 65
+	fmt.Println(string(v1))
+	v2 := 30028
+	fmt.Println(string(v2))
+	v3 := "100"
+	v4, _ := strconv.Atoi(v3)
+	fmt.Println(v4)
+	v5 := 100
+	v6 := strconv.Itoa(v5)
+	fmt.Println(v6)
 }
