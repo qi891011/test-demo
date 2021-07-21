@@ -41,4 +41,39 @@ func main() {
 	for i, v := range summer {
 		fmt.Println("summer[", i, "]", v)
 	}
+
+	//动态增加元素
+	oldSlice := make([]int, 5, 10)
+	newSlice := append(oldSlice, 1,2,3)
+	fmt.Println("oldSlice:", oldSlice)
+	fmt.Println("newSlice:", newSlice)
+	appendSlice := []int{1,2,3,4,5}
+	newSlice1 := append(oldSlice, appendSlice...)
+	fmt.Println("newSlice1:", newSlice1) //[0 0 0 0 0 1 2 3 4 5]
+
+	slice1 := []int{1,2,3,4,5}
+	slice2 := []int{5,4,3}
+	// 复制 slice1 到 slice 2
+	//copy(slice2, slice1)
+	//fmt.Println(slice2)
+	copy(slice1, slice2)
+	fmt.Println("copy_slice1:", slice1) //[5 4 3 4 5]
+
+	slice3 := []int{1,2,3,4,5,6,7,8,9,10}
+	fmt.Println("slice3原始长度:", len(slice3))
+	fmt.Println("slice3原始容量:", cap(slice3))
+	fmt.Println(slice3)
+	slice3 = slice3[:len(slice3) - 5]
+	fmt.Println(slice3)
+	slice3 = slice3[5:]
+	fmt.Println(slice3)
+	fmt.Println("slice3长度变为", len(slice3))
+	fmt.Println("slice3的容量变为",cap(slice3))
 }
+
+
+
+
+
+
+
